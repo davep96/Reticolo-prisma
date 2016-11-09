@@ -1,0 +1,69 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[T1]{fontenc} %For use of italian letters
+
+\usepackage[utf8]{inputenc} %For use of italian letters
+
+\usepackage[italian]{babel} %For use of italian letters
+
+\usepackage{lmodern} %Vector PDF
+
+\usepackage{amsmath} %\dfrac
+
+\usepackage{enumitem} %description environment 
+
+\usepackage[margin=1in]{geometry} %Smaller margins
+
+\begin{document}
+	
+	\section{Strumentazione}
+	Per estrarre i valori della distanza delle fenditure e i valori delle lunghezze d'onda è stata usata la seguente strumentazione:
+	\begin{description}[align=left]
+		\item [Una lampada al sodio] Questa lampada è stata utilizzata per misurare il passo del reticolo di rifrazione. La scelta di questa lampada è dovuta al fatto che presentava lunghezze d'onda note, ben chiare e ben separabili ad ordini alti.
+		
+		\item [Una lampada al mercurio] Usata, al contrario della precedente, per la misura delle lunghezze d'onda dei principali fasci di luce dello spettro del mercurio. 
+		
+		\item [Un reticolo di diffrazione] Strumento servito per deviare i raggi di luce provenienti dalle lampade. Il reticolo era dotato di 300 fenditure al millimetro per un totale di 2.4 millimetri. Questo dato è stato verificato tramite lo studio dello spettro del sodio.
+		
+		\item [Uno spettrometro] Principale strumento utilizzato. Lo spettrometro è servito per la misura degli angoli sottesi dai fasci di luce deviati dal reticolo. Questo era composto da quattro parti:
+		\begin{description} [align=left]
+			\item [Un collimatore] Componente utilizzata per collimare i raggi provenienti dalla lampada. Il collimatore era fisso alla base dello spettrometro, senza possibilità di movimento. Per la messa a punto del collimatore erano presenti due viti. Una per regolare il fuoco del collimatore e una per variare l'apertura della fenditura dalla quale entrava la luce.
+			\item [Un piatto] Utilizzato come sostegno per il reticolo a diffrazione. Il piatto era posto parallelamente al piano di lavoro ed era dotato di due pinze verticali per impedire il movimento al reticolo. Il piatto era regolabile in altezza e per rotazioni sul suo asse. Era dotato di tre viti, una di bloccaggio rispetto alle regolazioni in altezza, una di bloccaggio rispetto alle rotazioni e una vite micrometrica per piccole rotazioni sul suo asse.
+			\item[Un cannocchiale] Utilizzato per l'osservazione dei raggi luminosi diffratti dal reticolo. Il cannocchiale era collegato allo spettrometro in modo che potesse girare intorno al piatto. Inoltre era dotato di tre viti: una per la regolazione del fuoco, una per il bloccaggio rispetto alle rotazioni intorno al piatto ed una vite (presumibilmente) micrometrica, purtroppo non funzionante.
+			\item[Un goniometro] Utilizzato per la misura degli angoli, dotato di due coppie di nonii contrapposti. Il goniometro dotato di una sensibilità al terzo di grado (ossia venti primi), teoricamente estendibile tramite l'utilizzo dei nonii al mezzo primo. Più realisticamente l'incertezza dovuta alla difficoltosa lettura del nonio contribuiva con un errore di circa un primo.
+		
+		\item[Un righello] Utilizzato per misurare la larghezza del reticolo. Il righello aveva sensibilità al millimetro.
+		\end{description}
+	\end{description}
+	\section{Iter sperimentale}
+	È possibile dividere la procedura sperimentale in tre fasi:
+	\begin{itemize}
+		\item Calibrazione e messa a punto degli strumenti.
+		\item Misura del passo del reticolo.
+		\item Analisi dello spettro del mercurio.
+	\end{itemize}
+	Ciascuna fase è servita strettamente alla successiva e tutte le misure effettuate sono state usate per un'accurata analisi dei dati.
+	\subsection{Calibrazione dello spettrometro}
+	La calibrazione dello spettrometro è stata necessaria al fine di rendere più chiaramente visibile lo spettro del sodio e del mercurio. \\
+	\subsubsection*{Cannocchiale}
+	In primo luogo è stato spostato il fuoco del cannocchiale in modo da poter mettere a fuoco luce proveniente dall'infinito. Per fare ciò è stato puntato il cannocchiale fuori dalla finestra ed è stato messo a fuoco il palazzo di fronte al laboratorio (l'altra ala del Dipartimento di Fisica), posto ad una distanza di circa 20 metri.
+	La calibrazione ottimale del cannocchiale era necessaria per permettere una chiara visione dei raggi di luce paralleli provenienti dal collimatore.\\
+	\subsubsection*{Collimatore}
+	Per la calibrazione del collimatore è stato rimesso a posto il cannocchiale ed è stata accesa la lampada al sodio. Una volta scaldata (circa 3/4 minuti) attraverso una delle viti del collimatore è stata stretta la fenditura tanto da poter, senza fatica, osservare la luce della lampada attraverso il cannocchiale. Successivamente è stato sistemato il fuoco del collimatore in modo da poter vedere nitidamente la fenditura. Come ultimo passaggio è stata stretta ancora la fenditura fino al punto che il fascio di luce centrale non avesse uno spessore di mezzo millimetro circa.
+	\subsubsection*{Piatto}
+	La calibrazione del piatto era volta alla corretta misura degli angoli. Questa consisteva nel posizionamento del reticolo perpendicolarmente al fascio di luce.\\
+	Per fare ciò è stato inizialmente posto a mano il reticolo quanto più perpendicolarmente al fascio possibile e sono stati misurati gli angoli sottesi dal raggio più interno al quarto ordine sia a destra che a sinistra del centro. Per la misura degli angoli di deflessione, in questo caso come in tutti gli altri, è stato preso il valore assoluto della differenza dei valori individuati dal massimo centrale e il raggio la cui deflessione si voleva misurare. È stato quindi calcolato l'angolo $ \beta $ tra la normale al reticolo e il fascio collimato attraverso la relazione:
+	\[ \beta = \arctan \left( \sin \left( \frac{\theta_2-\theta_1}{2} \right) \cdot \dfrac { \cos \left( \frac{\theta_2 + \theta_1}{2}\right)} {1- \cos \left( \frac{\theta_2-\theta_1}{2} \right) \cos \left( \frac{\theta_1+\theta_2}{2}\right)} \right) \]
+	dove $ \theta_1, \ \theta_2 $ sono gli angoli di deflessione misurati. Noto l'errore $ \beta $ attraverso la vite micrometrica si è corretta la posizione del reticolo e il procedimento è stato ripetuto fino ad ottenere un valore di $ \beta $ minore di cinque primi.
+	\subsection{Misura del passo del reticolo}
+	Verificata la perpendicolarità del reticolo rispetto al fascio di luce collimato si è potuto proseguire con la determinazione del passo.\\
+	Per calcolare il passo sono stati misurati gli angoli sottesi dai fasci di luce del secondo, terzo e quarto ordine (sia da una parte dello zero che dall'altra) dei due raggi di luce distinguibili. Infine è stato trovato il passo $ d $ tramite la relazione:
+	\[ d=\frac{k \lambda}{\sin\theta_{k,\lambda}} \]
+	dove $ k $ è l'ordine, $ \lambda $ è la lunghezza d'onda e $ \theta_{k,\lambda} $ è l'angolo sotteso da un raggio di lunghezza d'onda $ \lambda $ al $ k $-esimo ordine.\\
+	Per una stima del potere risolutivo dello strumento sono stati misurati gli angoli sottesi da i fasci di luce al prim'ordine.
+	\subsection{Analisi dello spettro del mercurio}
+	In modo simile alla misura del passo è stato analizzato lo spettro del mercurio. Per fare ciò era necessario conoscere la misura del passo del reticolo. \\
+	Infatti, una volta sostituita la lampada sono stati misurati tutti i raggi visibili con ai tre ordini più grandi ai quali questi risultavano nitidamente distinguibili (a eccezione dei rossi i quali erano visibili solo ai primi due ordini) e tramite la relazione:
+	\[ \lambda =\frac{d\sin\theta_{k,\lambda}}{k} \]
+	trovata invertendo la precedente.
+\end{document}
