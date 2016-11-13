@@ -1,0 +1,355 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[italian]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{lmodern}
+\usepackage{siunitx}
+
+\usepackage{xcolor}
+
+\usepackage{colortbl}
+
+\usepackage{multirow}
+
+\usepackage{rotating}
+
+\usepackage{booktabs}
+
+\usepackage{longtable}
+
+\newcommand*\chem[1]{\ensuremath{\mathrm{#1}}}
+
+\newcommand{\virgolette}[1]{``#1''}
+
+\author{Nicolò Cavalleri, Giacomo Lini, Davide Passaro}
+
+\title{Spettrometro a Reticolo}
+
+\begin{document}
+
+\maketitle
+\author
+
+\begin{abstract}
+
+	Di seguito vengono riportate ed esaminate le procedure compiute per la misura di diverse grandezze fisiche caratteristiche di un sistema composto da un reticolo che presenta fenomeni di interferenza e diffrazione. Nello specifico, dato un reticolo, viene determinato il passo, cioè la distanza tra due fenditure, a partire dallo spettro di emissione di una sostanza con lunghezza d'onda nota; vengono determinati anche il potere dispersivo e risolutivo, rispettivamente la distanza angolare tra due righe spettrali a un determinato ordine e un indice della capacità dello strumento di risolvere in maniera precisa delle righe di dispersione. Data inoltre una lampada al mercurio (\chem{Hg}), ne viene determinato lo spettro di emissione, con le lunghezze d'onda caratteristiche. 
+	
+\end{abstract}
+	
+\section{Introduzione} 
+
+	Uno spettrometro a reticolo è un sistema fisico composto da una base fissa su cui sono disposte due strutture rotanti, collegate a un goniometro e dei noni
+	per la misura di angoli. Al centro di questa struttura si trova un sostegno dove viene posto il reticolo, vale a dire una lastra di vetro con delle fenditure molto numerose e sottili. A questa piattaforma sono poi collegati un collimatore, cioè un dispositivo che \virgolette{raddrizza} o \virgolette{collima}, il fascio di luce rendendolo perpendicolare al reticolo, e un cannocchiale che consente di osservare lo spettro di emissione della luce incidente il reticolo. Avvicinando il collimatore ad una
+	lampada è possibile catturare la luce emessa dalla stessa e osservarne lo spettro di emissione. \\
+	
+	Dal punto di vista matematico la relazione fondamentale nell'analisi di uno spettro di emissione di una fonte luminosa è la seguente:
+	\begin{equation} \label{master}
+		d \, \sin \theta  = k \, \lambda
+	\end{equation}
+	dove $d$ rappresenta il passo del reticolo, cioè la distanza tra i punti medi di due fenditure vicine, $\theta$ l'angolo di deflessione del raggio di luce reso monocromatico dal reticolo, $k$ l'ordine dello spettro contenente il raggio considerato e $\lambda$ la lunghezza d'onda della radiazione luminosa emessa. Chiaramente a diverse lunghezze d'onda corrispondono anche diverse intensità di emissione, che sperimentalmente si osservano in maniera intuitiva a partire dalla luminosità delle righe di emissione. La relazione matematica che sta alla base di questo fenomeno è la seguente:
+	\begin{equation} \label{intensity}
+		I(\theta) \propto \dfrac{\sin^2 \, \left(m \, \frac{d}{\lambda} \, \pi \sin{\theta} \right)}{\sin^2 \, \left(\frac{d}{\lambda} \,\pi \sin{\theta}\right)}
+	\end{equation}
+	dove $ I $ rappresenta l'intensità luminosa, $m$ il numero di fessure del reticolo che sono investite dalla luce e le altre costanti sono come per la formula $\left( \ref{master} \right)$. \\
+	
+	L'equazione $\left( \ref{master} \right)$, con gli strumenti a disposizione è caratterizzata dal fatto di avere due incognite, $\lambda$ e $d$. Per questa ragione l'esperimento si è svolto in due fasi: la determinazione del passo ($ d $) a partire da uno spettro noto, e la determinazione dello spettro una volta noto il passo. Nel nostro caso per la determinazione del passo è stata usata una lampada al sodio la cui emissione è caratterizzata da due lunghezze d'onda specifiche:
+	\[ 
+		\lambda_1 = \SI{589.0}{\nano\meter} \quad
+		\lambda_2 = \SI{589.6}{\nano\meter}
+	\]
+	corrispondenti a due righe gialle distinte ma molto vicine nello spettro. Risolvendo $\left( \ref{master} \right)$ rispetto a $d$ è possibile dunque determinare il passo del reticolo, che da incognita diventa un termine noto, con errore associato. A questo punto la stessa relazione garantisce di poter determinare le lunghezze d'onda dello spettro di emissione di un diverso elemento chimico, nel caso in questione il mercurio (\chem{Hg}).
+	
+		\section{Strumentazione}
+		Per estrarre i valori della distanza delle fenditure e quelli delle lunghezze d'onda è stata usata la seguente strumentazione:
+		\begin{description}[align=left]
+			\item [Lampada al sodio] Questa lampada è stata utilizzata per misurare il passo del reticolo di rifrazione. La scelta di questa lampada è dovuta al fatto che presentava lunghezze d'onda note, ben chiare e separabili a tutti gli ordini.
+			
+			\item [Lampada al mercurio] Usata per la misura delle lunghezze d'onda dei principali fasci di luce dello spettro del mercurio. 
+			
+			\item [Reticolo di diffrazione] Strumento servito separare i raggi di luce degli spettri a seconda della lunghezza d'onda. Il reticolo era dotato di 300 fenditure al millimetro per un totale di 2.4 millimetri. Questo risultato è stato verificato tramite lo studio dello spettro del sodio.
+			
+			\item [Spettrometro] Principale strumento utilizzato. Lo spettrometro è servito per la misura degli angoli sottesi dai fasci di luce deviati dal reticolo. Questo era composto da quattro parti:
+			\begin{description} [align=left]
+				\item [Collimatore] Componente utilizzata per collimare i raggi provenienti dalla lampada. Il collimatore era fisso alla base dello spettrometro, senza possibilità di movimento. Per la messa a punto del collimatore erano presenti due viti. Una per regolare il fuoco del collimatore e una per variare l'apertura della fenditura dalla quale entrava la luce.
+				\item [Piatto] Utilizzato come sostegno per il reticolo a diffrazione. Il piatto era posto parallelamente al piano di lavoro ed era dotato di due pinze verticali per impedire il movimento al reticolo. Il piatto era regolabile in altezza e per rotazioni sul suo asse. Era dotato di tre viti, una di bloccaggio rispetto alle regolazioni in altezza, una di bloccaggio rispetto alle rotazioni e una vite micrometrica per piccole rotazioni sul suo asse.
+				\item[Cannocchiale] Utilizzato per l'osservazione dei raggi luminosi diffratti dal reticolo. Il cannocchiale era collegato allo spettrometro in modo che potesse girare intorno al piatto. Inoltre era dotato di tre viti: una per la regolazione del fuoco, una per il bloccaggio rispetto alle rotazioni intorno al piatto ed una vite (presumibilmente) micrometrica, purtroppo non funzionante.
+				\item[Goniometro] Utilizzato per la misura degli angoli, dotato di due coppie di noni contrapposti. Il goniometro possedeva una sensibilità al terzo di grado (ossia venti primi), teoricamente estendibile tramite l'utilizzo dei noni al mezzo primo. Più realisticamente l'incertezza dovuta alla difficoltosa lettura del nonio contribuiva con un errore di circa un primo.
+			\end{description}
+			
+			\item[Righello] Utilizzato per misurare la larghezza del reticolo. Il righello aveva sensibilità al millimetro.
+		\end{description}
+		\section{Iter sperimentale}
+		È possibile dividere la procedura sperimentale in tre fasi:
+		\begin{itemize}
+			\item Calibrazione e messa a punto degli strumenti.
+			\item Misura del passo del reticolo.
+			\item Analisi dello spettro del mercurio.
+		\end{itemize}
+		Ciascuna fase è servita strettamente alla successiva e tutte le misure effettuate sono state usate per un'accurata analisi dei dati.
+		\subsection{Calibrazione dello spettrometro}
+		La calibrazione dello spettrometro era necessaria al fine di rendere più chiaramente visibile gli spettri del sodio e del mercurio. \\
+		\subsubsection*{Cannocchiale}
+		In primo luogo è stato spostato il fuoco del cannocchiale in modo da poter mettere a fuoco luce proveniente dall'infinito. Per fare ciò è stato puntato il cannocchiale fuori dalla finestra ed è stato messo a fuoco il palazzo di fronte al laboratorio (l'altra ala del Dipartimento di Fisica), posto ad una distanza di circa 50 metri.
+		La calibrazione ottimale del cannocchiale era necessaria per permettere una chiara visione dei raggi di luce paralleli provenienti dal collimatore.\\
+		\subsubsection*{Collimatore}
+		Per la calibrazione del collimatore è stato rimesso a posto il cannocchiale ed è stata accesa la lampada al sodio. Una volta scaldata attraverso una delle viti del collimatore è stata stretta la fenditura tanto da poter, senza fatica, osservare la luce della lampada attraverso il cannocchiale. Successivamente è stato sistemato il fuoco del collimatore in modo da poter vedere nitidamente la fenditura. Come ultimo passaggio è stata stretta ancora la fenditura fino al punto che il fascio di luce centrale avesse uno spessore di mezzo millimetro circa.
+		\subsubsection*{Piatto}
+		La calibrazione del piatto era volta alla corretta misura degli angoli. Questa consisteva nel posizionamento del reticolo perpendicolarmente al fascio di luce.\\
+		Per fare ciò è stato inizialmente posto a mano il reticolo quanto più perpendicolarmente al fascio possibile e sono stati misurati gli angoli sottesi dal raggio più interno al quarto ordine sia a destra che a sinistra del centro. Per la misura degli angoli di deflessione, in questo caso come in tutti gli altri, è stato preso il valore assoluto della differenza dei valori individuati dal massimo centrale e il raggio la cui deflessione si voleva misurare. È stato quindi calcolato l'angolo $ \beta $ tra la normale al reticolo e il fascio collimato attraverso la relazione:
+		\[ \beta = \arctan \left( \sin \left( \frac{\theta_2-\theta_1}{2} \right) \cdot \dfrac { \cos \left( \frac{\theta_2 + \theta_1}{2}\right)} {1- \cos \left( \frac{\theta_2-\theta_1}{2} \right) \cos \left( \frac{\theta_1+\theta_2}{2}\right)} \right) \]
+		dove $ \theta_1, \ \theta_2 $ sono gli angoli di deflessione misurati. Noto l'errore $ \beta $ attraverso la vite micrometrica si è corretta la posizione del reticolo e il procedimento è stato ripetuto fino ad ottenere un valore di $ \beta $ minore di cinque primi.
+		\subsection{Misura del passo del reticolo}
+		Verificata la perpendicolarità del reticolo rispetto al fascio di luce collimato si è potuto proseguire con la determinazione del passo.\\
+		Per calcolare il passo sono stati misurati gli angoli sottesi dai fasci di luce dei primi ordini (sia da una parte dello zero che dall'altra) dei due raggi di luce distinguibili. Infine è stato trovato il passo $ d $ tramite la relazione:
+		\[ d=\frac{k \lambda}{\sin\theta_{k,\lambda}} \]
+		dove $ k $ è l'ordine, $ \lambda $ è la lunghezza d'onda e $ \theta_{k,\lambda} $ è l'angolo sotteso da un raggio di lunghezza d'onda $ \lambda $ al $ k $-esimo ordine.\\
+		Per una stima del potere risolutivo dello strumento sono stati misurati gli angoli sottesi da i fasci di luce al prim'ordine in quanto erano i più vicini misurati in tutta l'esperienza.
+		\subsection{Analisi dello spettro del mercurio}
+		In modo simile alla misura del passo è stato analizzato lo spettro del mercurio. Per fare ciò era necessario conoscere la misura del passo del reticolo. \\
+		Infatti, una volta sostituita la lampada sono state misurate le lunghezze d'onda appartenenti allo spettro del mercurio. Questo è stato fatto campionando angoli agli ordini più grandi ai quali i raggi risultavano nitidamente distinguibili e inserendoli nella relazione:
+		\[ \lambda =\frac{d\sin\theta_{k,\lambda}}{k} \]
+		trovata invertendo la precedente.
+
+		\section{Presentazione ed analisi dei dati}
+		\subsection{Doppietto del sodio e misura del passo del reticolo}
+		Veniamo ora ai dati veri e propri. Quanto alla misura dell'angolo delle due linee del doppietto del sodio, per prima cosa si è effettuata la calibrazione del piatto fino ad ottenere un $\beta$ di $1.25$ primi, largamente al di sotto del livello di accettazione (di $ 5 $ primi). In seguito a ciò sono stati campionati gli angoli sottesi da ciascuno dei due massimi del sodio al primo e secondo ordine, dati che verranno successivamente usati per verificare che il potere risolutivo calcolato per via teorica corrisponda con quello reale. Dopodiché, al fine di calcolare il passo del reticolo $d$ come da procedura illustrata, abbiamo misurato gli angoli sottesi dai massimi del doppietto del sodio all'ordine più grande distinguibile. Questo per noi costituiva il quinto ordine sul quale abbiamo effettuato due misure a testa (per un totale quindi di sei misure), in modo da avere un numero sufficiente di misure su cui fare statistica. Essendo però il nonio di difficile lettura, forse per influenza reciproca, ci siamo accorti che tutti gli sperimentatori pur ripetendo la misura da capo giungevano allo stesso valore. Per avere maggiore indipendenza statistica abbiamo notato che, misurando il terzo, il quarto e il quinto ordine ed eseguendo in loco l'analisi dei dati già preparata, gli errori sul passo $d$ erano tutti dello stesso ordine di grandezza, ossia di circa tre ordini di grandezza minori della misura del passo. Nello specifico l'errore tra il terzo e il quinto ordine si riduce al massimo di un fattore $3$, che su questi errori relativi non incide particolarmente sul risultato. Abbiamo quindi ritenuto più significativo ripetere la misura del terzo, quarto e quinto ordine due volte a destra e due volte a sinistra, in modo da avere misure davvero indipendenti su cui fare statistica. Per il calcolo del passo attraverso la media pesata abbiamo inserito anche le misure del primo e del secondo ordine che avendo un errore molto maggiore hanno nel calcolo un peso minore, ma sono comunque utili a migliorare la precisione. I dati del primo massimo del doppietto sono visibili in tabella~\ref{tab1}.
+		
+		\begin{table}[htbp]
+			\centering
+			\caption{Angoli del primo massimo del doppietto}
+			\medskip
+			\begin{tabular}{rrrrrrr}
+				\bottomrule
+				\rowcolor[rgb]{ .267,  .447,  .769} \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Gradi (deg)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Primi (')}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$m$}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\theta$ (rad)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\Delta \theta$ (rad)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$d$ ($ \mu $m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\sigma _d$ (nm)}}} \\
+				\toprule
+				\rowcolor[rgb]{ .851,  .851,  .851} 130   & 39.5  & 0     & 2.280 & 0     &       &  \\
+				120   & 37.5  & 1     & 2.105 & 0.175 & 3.3808 & 16 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 110   & 13    & 2     & 1.924 & 0.357 & 3.3729 & 7.4 \\
+				99    & 4     & 3     & 1.729 & 0.551 & 3.3730 & 4.5 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 86    & 21    & 4     & 1.507 & 0.773 & 3.3728 & 2.8 \\
+				69    & 50    & 5     & 1.219 & 1.062 & 3.3729 & 1.5 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 99    & 3     & 3     & 1.729 & 0.552 & 3.3714 & 4.5 \\
+				86    & 21.5  & 4     & 1.507 & 0.773 & 3.3734 & 2.8 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 69    & 50.5  & 5     & 1.219 & 1.061 & 3.3732 & 1.6 \\
+				162   & 14    & -3    & 2.832 & 0.551 & 3.3746 & 4.5 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 174   & 57    & -4    & 3.053 & 0.773 & 3.3739 & 2.8 \\
+				191   & 25.5  & -5    & 3.341 & 1.061 & 3.3748 & 1.6 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 162   & 13    & -3    & 2.831 & 0.551 & 3.3762 & 4.5 \\
+				174   & 55    & -4    & 3.053 & 0.772 & 3.3759 & 2.9 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 191   & 24    & -5    & 3.341 & 1.060 & 3.3756 & 1.6 \\
+				\toprule
+			\end{tabular}%
+			\label{tab1}%
+		\end{table}%
+		
+		Le prime due colonne riportano la misura diretta in gradi e primi dell'angolo del massimo e $m$ indica l'ordine del massimo considerato (è stata adottata la convenzione di indicare con numeri positivi gli ordini osservati a destra, con numeri negativi quelli osservati a sinistra; $\Delta \theta$ sta per la differenza, in valore assoluto dell'angolo sotteso dal raggio di luce da quello centrale, riportato nella prima riga, e $d$ indica il passo del reticolo. Infine $\sigma _d$ indica l'errore di $d$, calcolato con la propagazione degli errori tenendo conto come errore la sensibilità dello strumento, non di $0.5'$, quella reale, ma di $2'$ che è una stima molto più realistica di quanto erroneamente noi leggessimo il nonio dello strumento. Qui di seguito, in tabella~\ref{tab2}, i dati del secondo massimo del doppietto, scritti con la stessa convenzione.
+		
+		\clearpage
+		
+		\begin{table}[htbp]
+			\centering
+			\caption{Angoli del secondo massimo del doppietto}
+			\medskip
+			\begin{tabular}{rrrrrrr}
+				\bottomrule
+				\rowcolor[rgb]{ .267,  .447,  .769} \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Gradi (deg)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Primi (')}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$m$}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\theta$ (rad)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\Delta \theta$ (rad)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$d$ ($ \mu $m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\sigma _d$ (nm)}}} \\
+				\toprule
+				\rowcolor[rgb]{ .851,  .851,  .851} 130   & 39.5  & 0     & 2.280418 & 0     &       &  \\
+				120   & 36    & 1     & 2.105 & 0.176 & 3.3759 & 16 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 110   & 10    & 2     & 1.923 & 0.358 & 3.3685 & 7.4 \\
+				99    & 1     & 3     & 1.728 & 0.552 & 3.3717 & 4.5 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 86    & 17.5  & 4     & 1.506 & 0.774 & 3.3728 & 2.8\\
+				69    & 44.5  & 5     & 1.217 & 1.063 & 3.3733 & 1.5 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 99    & 1.5   & 3     & 1.728 & 0.552 & 3.3725 & 4.5 \\
+				86    & 17    & 4     & 1.506 & 0.774 & 3.3723 & 2.8 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 69    & 43    & 5     & 1.217 & 1.064 & 3.3725 & 1.5 \\
+				162   & 17    & -3    & 2.832 & 0.552 & 3.3733 & 4.5 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 175   & 0.5   & -4    & 3.054 & 0.774 & 3.3738 & 2.8 \\
+				191   & 31    & -5    & 3.343 & 1.062 & 3.3752 & 1.5 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 162   & 17    & -3    & 2.832 & 0.552 & 3.3733 & 4.5 \\
+				175   & 0     & -4    & 3.054 & 0.774 & 3.3743 & 2.8 \\
+				\rowcolor[rgb]{ .851,  .851,  .851} 191   & 30    & -5    & 3.342 & 1.062 & 3.3758 & 1.5 \\
+				\toprule
+			\end{tabular}%
+			\label{tab2}%
+		\end{table}%
+		
+		Anche se non riportiamo la tabella di compatibilità, abbiamo verificato che le misure sono tutte compatibili tra di loro (con z tra l'altro molto bassi). I risultati delle medie pesate dei passi ricavati rispettivamente dal primo e dal secondo massimo del doppietto del sodio sono esposti in tabella~\ref{tab3}.
+		
+		\begin{table}[htbp]
+			\centering
+			\caption{Risultati medie pesate}
+			\medskip
+			\begin{tabular}{rrrr}
+				\bottomrule
+				\rowcolor[rgb]{ .267,  .447,  .769} \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$d$ ($ \mu $m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\sigma _d$ (nm)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\sigma _{\overline{d}}$ (nm)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\sigma _d / d$}}} \\
+				\toprule
+				3.37408 & 0.65 & 0.17 & 1.92E-04 \\
+				3.37385 & 0.65 & 0.17 & 1.92E-04 \\
+				\toprule
+			\end{tabular}%
+			\label{tab3}%
+		\end{table}%
+		
+		Verifichiamone la compatibilità. Abbiamo che $$z = \frac{d_1 - d_2}{\sqrt{\sigma _{d_1} ^2 +\sigma _{d_2} ^2}} = 0.249$$ da cui si deduce che le misure sono pienamente compatibili. Come misura finale del passo prendiamo quindi la media delle due e come errore l'errore massimo da cui $d = 3.37396 \pm 0.00065 \ \mu m$.
+		
+		\subsection{Spettro del mercurio}
+		Forti della nostra misura, calcolata con notevole precisione, passiamo ora alla misura dello spettro del mercurio. Per ottenere misure indipendenti di ogni massimo osservato abbiamo, come per il doppietto del sodio, usato i massimi dei due o tre ordini più esterni visibili. Anche qui il nostro procedimento è giustificato dal fatto che gli errori sono dello stesso ordine di grandezza. Variando le condizioni dell'esperimento durante l'esecuzione (grande ruolo hanno giocato le variazioni di luce nell'ambiente circostante) non sempre le misure erano ripetibili più volte, oppure capitava che non sempre gli ordini visibili a destra fossero visibili anche a sinistra. Si è adottato caso per caso il procedimento che trovava il miglior compromesso tra indipendenza delle misure e massima riduzione dell'errore, condizioni sperimentali permettendo. I massimi distintamente visibili per più ordini che siamo riusciti a misurare sono 9, a ciascuno dei quali abbiamo dato un nome. Qui di seguito la misura dei loro angoli e la deduzione della loro lunghezza d'onda attraverso la formula citata $d \sin \theta = k \lambda$. L'errore di $\lambda$ si trova propagando questa formula.
+		
+		\begin{table}
+			\centering
+			\caption{Misure dello spettro del mercurio}
+			\medskip
+			\begin{tabular}{rrrrrrr}
+				\bottomrule
+				\rowcolor[rgb]{ .267,  .447,  .769} \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Gradi (deg)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Primi (')}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{m}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\theta$ (rad)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\lambda$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\lambda$ (nm)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\sigma _\lambda$ (nm)}}} \\
+				\toprule
+				\bottomrule
+				\rowcolor[rgb]{ .557,  .663,  .859} \multicolumn{7}{c}{\textcolor[rgb]{ 1,  1,  1}{Viola interno}} \\
+				\toprule
+				116   & 46    & 2     & 2.038 & 4.0478E-07 & 404.78 & 1.35 \\
+				109   & 34    & 3     & 1.912 & 4.0457E-07 & 404.57 & 0.87 \\
+				101   & 59    & 4     & 1.780 & 4.0463E-07 & 404.63 & 0.61 \\
+				144   & 32    & -2    & 2.523 & 4.0478E-07 & 404.78 & 1.35 \\
+				151   & 44    & -3    & 2.648 & 4.0457E-07 & 404.57 & 0.87 \\
+				\midrule
+				&       &       &       &       &       &  \\
+				\bottomrule
+				\rowcolor[rgb]{ .557,  .663,  .859} \multicolumn{7}{c}{\textcolor[rgb]{ 1,  1,  1}{Viola esterno}} \\
+				\toprule
+				116   & 40    & 2     & 2.036 & 4.0764E-07 & 407.64 & 1.35 \\
+				144   & 39    & -2    & 2.525 & 4.0812E-07 & 408.12 & 1.35 \\
+				151   & 54    & -3    & 2.651 & 4.0762E-07 & 407.62 & 0.87 \\
+				109   & 23    & 3     & 1.909 & 4.0792E-07 & 407.92 & 0.87 \\
+				\midrule
+				&       &       &       &       &       &  \\
+				\bottomrule
+				\rowcolor[rgb]{ .557,  .663,  .859} \multicolumn{7}{c}{\textcolor[rgb]{ 1,  1,  1}{Blu}} \\
+				\toprule
+				107   & 51    & 3     & 1.882 & 4.3582E-07 & 435.82 & 0.86 \\
+				99    & 33    & 4     & 1.737 & 4.3569E-07 & 435.69 & 0.60 \\
+				153   & 27    & -3    & 2.678 & 4.3582E-07 & 435.82 & 0.86 \\
+				161   & 46    & -4    & 2.823 & 4.3590E-07 & 435.90 & 0.60 \\
+				99    & 32    & 4     & 1.737 & 4.3590E-07 & 435.90 & 0.60 \\
+				\midrule
+				&       &       &       &       &       &  \\
+				\bottomrule
+				\rowcolor[rgb]{ .557,  .663,  .859} \multicolumn{7}{c}{\textcolor[rgb]{ 1,  1,  1}{Verde interno}} \\
+				\toprule
+				113   & 41    & 2     & 1.984 & 4.9229E-07 & 492.29 & 1.33 \\
+				104   & 42    & 3     & 1.827 & 4.9213E-07 & 492.13 & 0.84 \\
+				147   & 37    & -2    & 2.576 & 4.9229E-07 & 492.29 & 1.33 \\
+				156   & 37    & -3    & 2.733 & 4.9243E-07 & 492.43 & 0.84 \\
+				\midrule
+				&       &       &       &       &       &  \\
+				\bottomrule
+				\rowcolor[rgb]{ .557,  .663,  .859} \multicolumn{7}{c}{\textcolor[rgb]{ 1,  1,  1}{Verde esterno}} \\
+				\toprule
+				113   & 31    & 2     & 1.981 & 4.9698E-07 & 496.98 & 1.33 \\
+				104   & 25    & 3     & 1.822 & 4.9713E-07 & 497.13 & 0.84 \\
+				156   & 52    & -3    & 2.738 & 4.9684E-07 & 496.84 & 0.84 \\
+				147   & 47    & -2    & 2.579 & 4.9698E-07 & 496.98 & 1.33 \\
+				\midrule
+				&       &       &       &       &       &  \\
+				\bottomrule
+				\rowcolor[rgb]{ .557,  .663,  .859} \multicolumn{7}{c}{\textcolor[rgb]{ 1,  1,  1}{Verde giallo}} \\
+				\toprule
+				101   & 36    & 3     & 1.773 & 5.4610E-07 & 546.10 & 0.82 \\
+				90    & 18    & 4     & 1.576 & 5.4612E-07 & 546.12 & 0.54 \\
+				159   & 41    & -3    & 2.787 & 5.4582E-07 & 545.82 & 0.82 \\
+				171   & 0     & -4    & 2.985 & 5.4612E-07 & 546.12 & 0.54 \\
+				90    & 19    & 4     & 1.576 & 5.4594E-07 & 545.94 & 0.54 \\
+				\midrule
+				&       &       &       &       &       &  \\
+				\bottomrule
+				\rowcolor[rgb]{ .557,  .663,  .859} \multicolumn{7}{c}{\textcolor[rgb]{ 1,  1,  1}{Giallo interno}} \\
+				\toprule
+				110   & 39    & 2     & 1.931 & 5.7698E-07 & 576.98 & 1.31 \\
+				99    & 47    & 3     & 1.742 & 5.7699E-07 & 576.99 & 0.80 \\
+				87    & 30    & 4     & 1.527 & 5.7687E-07 & 576.87 & 0.52 \\
+				161   & 31    & -3    & 2.819 & 5.7699E-07 & 576.99 & 0.80 \\
+				173   & 48.5  & -4    & 3.034 & 5.7696E-07 & 576.96 & 0.52 \\
+				\midrule
+			\end{tabular}%
+			\label{tab4}%
+		\end{table}%
+		
+		\clearpage
+		
+		\begin{table}
+			\centering
+			\begin{tabular}{rrrrrrr}
+				\bottomrule
+				\rowcolor[rgb]{ .267,  .447,  .769} \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Gradi (deg)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{Primi (')}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{m}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\theta$ (rad)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\lambda$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\lambda$ (nm)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\sigma _\lambda$ (nm)}}} \\	
+				\toprule
+				\bottomrule
+				\rowcolor[rgb]{ .557,  .663,  .859} \multicolumn{7}{c}{\textcolor[rgb]{ 1,  1,  1}{Giallo esterno}} \\
+				\toprule
+				110   & 36    & 2     & 1.930 & 5.7836E-07 & 578.36 & 1.31 \\
+				99    & 40    & 3     & 1.740 & 5.7896E-07 & 578.96 & 0.80 \\
+				87    & 18    & 4     & 1.524 & 5.7902E-07 & 579.02 & 0.52 \\
+				161   & 39    & -3    & 2.821 & 5.7924E-07 & 579.24 & 0.80 \\
+				174   & 0     & -4    & 3.037 & 5.7902E-07 & 579.02 & 0.52 \\
+				\midrule
+				&       &       &       &       &       &  \\
+				\bottomrule
+				\rowcolor[rgb]{ .557,  .663,  .859} \multicolumn{7}{c}{\textcolor[rgb]{ 1,  1,  1}{Rosso}} \\
+				\toprule
+				120   & 0     & 1     & 2.094 & 6.2354E-07 & 623.54 & 2.73 \\
+				108   & 58    & 2     & 1.902 & 6.2330E-07 & 623.30 & 1.30 \\
+				141   & 18    & -1    & 2.466 & 6.2354E-07 & 623.54 & 2.73 \\
+				152   & 20    & -2    & 2.659 & 6.2330E-07 & 623.30 & 1.30 \\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+		
+		Non riportiamo la tabella di compatibilità per eccessiva dimensione ma abbiamo verificato che le misure delle lunghezze d'onda provenienti dai diversi ordini sono tutte compatibili.
+		Per ogni lunghezza d'onda individuata si mostra ora la media pesata e il valore di $\lambda$ più vicino dello spettrometro del mercurio teorico. Si vuole vedere se tali misure siano compatibili.
+		
+		\begin{table}[htbp]
+			\centering
+			\caption{Settro del mercurio misurato}
+			\medskip
+			\begin{tabular}{lrrrrrr}
+				\bottomrule
+				\rowcolor[rgb]{ .267,  .447,  .769} \textcolor[rgb]{ 1,  1,  1}{\textbf{Colore}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\lambda$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\lambda$ (nm)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\sigma _\lambda$ (m)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$\lambda _{att}$ (nm)}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{$I _{rel}$}}} & \multicolumn{1}{l}{\textcolor[rgb]{ 1,  1,  1}{\textbf{z}}} \\
+				\toprule
+				\rowcolor[rgb]{ .267,  .447,  .769} \textcolor[rgb]{ 1,  1,  1}{\textbf{Viola interno}} & \cellcolor[rgb]{ .851,  .851,  .851} 4.0463E-07 & \cellcolor[rgb]{ .851,  .851,  .851} 404.632 & \cellcolor[rgb]{ .851,  .851,  .851} 3.95E-10 & \cellcolor[rgb]{ .851,  .851,  .851} 404.656 & \cellcolor[rgb]{ .851,  .851,  .851} 1800 & \cellcolor[rgb]{ .851,  .851,  .851} 0.0617 \\
+				\rowcolor[rgb]{ .267,  .447,  .769} \textcolor[rgb]{ 1,  1,  1}{\textbf{Viola esterno}} & \cellcolor[rgb]{ 1,  1,  1} 4.078E-07 & \cellcolor[rgb]{ 1,  1,  1} 407.802 & \cellcolor[rgb]{ 1,  1,  1} 5.15E-10 & \cellcolor[rgb]{ 1,  1,  1} 407.783 & \cellcolor[rgb]{ 1,  1,  1} 150 & \cellcolor[rgb]{ 1,  1,  1} 0.0370 \\
+				\rowcolor[rgb]{ .267,  .447,  .769} \textcolor[rgb]{ 1,  1,  1}{\textbf{Blu}} & \cellcolor[rgb]{ .851,  .851,  .851} 4.3583E-07 & \cellcolor[rgb]{ .851,  .851,  .851} 435.829 & \cellcolor[rgb]{ .851,  .851,  .851} 3.01E-10 & \cellcolor[rgb]{ .851,  .851,  .851} 435.833 & \cellcolor[rgb]{ .851,  .851,  .851} 4000 & \cellcolor[rgb]{ .851,  .851,  .851} 0.0142 \\
+				\rowcolor[rgb]{ .267,  .447,  .769} \textcolor[rgb]{ 1,  1,  1}{\textbf{Verde interno}} & \cellcolor[rgb]{ 1,  1,  1} 4.9228E-07 & \cellcolor[rgb]{ 1,  1,  1} 492.283 & \cellcolor[rgb]{ 1,  1,  1} 5.01E-10 & \cellcolor[rgb]{ 1,  1,  1} 491.607 & \cellcolor[rgb]{ 1,  1,  1} 80 & \cellcolor[rgb]{ 1,  1,  1} 1.3481 \\
+				\rowcolor[rgb]{ .267,  .447,  .769} \textcolor[rgb]{ 1,  1,  1}{\textbf{Verde esterno}} & \cellcolor[rgb]{ .851,  .851,  .851} 4.9698E-07 & \cellcolor[rgb]{ .851,  .851,  .851} 496.981 & \cellcolor[rgb]{ .851,  .851,  .851} 5.00E-10 & \cellcolor[rgb]{ .851,  .851,  .851} 497.037 & \cellcolor[rgb]{ .851,  .851,  .851} 5 & \cellcolor[rgb]{ .851,  .851,  .851} 0.1121 \\
+				\rowcolor[rgb]{ .267,  .447,  .769} \textcolor[rgb]{ 1,  1,  1}{\textbf{Verde giallo}} & \cellcolor[rgb]{ 1,  1,  1} 5.4604E-07 & \cellcolor[rgb]{ 1,  1,  1} 546.037 & \cellcolor[rgb]{ 1,  1,  1} 2.74E-10 & \cellcolor[rgb]{ 1,  1,  1} 546.074 & \cellcolor[rgb]{ 1,  1,  1} 1100 & \cellcolor[rgb]{ 1,  1,  1} 0.1343 \\
+				\rowcolor[rgb]{ .267,  .447,  .769} \textcolor[rgb]{ 1,  1,  1}{\textbf{Giallo interno}} & \cellcolor[rgb]{ .851,  .851,  .851} 5.7694E-07 & \cellcolor[rgb]{ .851,  .851,  .851} 576.942 & \cellcolor[rgb]{ .851,  .851,  .851} 3.00E-10 & \cellcolor[rgb]{ .851,  .851,  .851} 576.96 & \cellcolor[rgb]{ .851,  .851,  .851} 240 & \cellcolor[rgb]{ .851,  .851,  .851} 0.0591 \\
+				\rowcolor[rgb]{ .267,  .447,  .769} \textcolor[rgb]{ 1,  1,  1}{\textbf{Giallo esterno}} & \cellcolor[rgb]{ 1,  1,  1} 5.7901E-07 & \cellcolor[rgb]{ 1,  1,  1} 579.006 & \cellcolor[rgb]{ 1,  1,  1} 2.99E-10 & \cellcolor[rgb]{ 1,  1,  1} 578.966 & \cellcolor[rgb]{ 1,  1,  1} 100 & \cellcolor[rgb]{ 1,  1,  1} 0.1338 \\
+				\rowcolor[rgb]{ .267,  .447,  .769} \textcolor[rgb]{ 1,  1,  1}{\textbf{Rosso}} & \cellcolor[rgb]{ .851,  .851,  .851} 6.2334E-07 & \cellcolor[rgb]{ .851,  .851,  .851} 623.344 & \cellcolor[rgb]{ .851,  .851,  .851} 8.28E-10 & \cellcolor[rgb]{ .851,  .851,  .851} 623.44 & \cellcolor[rgb]{ .851,  .851,  .851} 80 & \cellcolor[rgb]{ .851,  .851,  .851} 0.1161 \\
+				\toprule
+			\end{tabular}%
+			\label{tab6}%
+		\end{table}%
+		
+		Le prime tre colonne riportano il risultato della media pesata, in metri e nanometri e il suo errore. La quarta colonna riporta il valore della lunghezza d'onda dello spettro teorico più vicina. La penultima riporta il valore dell'intensità relativa e la l'ultima colonna riporta la z per il test di compatibilità.
+		Si vede subito che tutte le lunghezze d'onda calcolate sono compatibili con quelle teoriche più vicine ($z < 1$), ma ce ne è una sospetta, quella del verde interno. Se andiamo a vederne le misure relative troviamo che esse si trovano tutte sopra il valore teorico della lunghezza d'onda più vicina per cui sembra che, vista anche la precisione delle altre misure, ci sia stato un errore sistematico, anche se non si riesce a fare ipotesi sull'origine. Non è probabilmente riconducibile ad una fluttuazione statistica perché le misure sono tutte al di sopra di quella teorica e hanno una piccola deviazione standard, sembrano cioè essere misure di un valore diverso, inoltre troviamo improbabile un errore sistematico sulla lettura dell'angolo in quanto per motivi di tempo le letture degli angoli venivano fatte in sequenza per tutti i massimi visibili dello stesso ordine e non per diversi ordini dello stesso massimo.
+		Un'altra sorpresa viene dal fatto che abbiamo letto misure di lunghezze d'onda con intensità relative molto basse come ad esempio per le misure del verde esterno e del rosso, quando c'erano invece massimi con intensità teoricamente più alta che non abbiamo visto. Anche per questo non abbiamo trovato spiegazione.
+		
+		\subsection{Potere risolutivo e dispersivo}
+		Si vuole mostrare che il potere risolutivo calcolato per via teorica permette largamente la vista distinta dei due massimi del doppietto del sodio fin dal primo ordine. Abbiamo misurato la lunghezza del reticolo con un righello trovando una misura di $L = 24 mm$. Sapendo la misura del passo $d$ troviamo che il nostro reticolo ha circa $$\frac{L}{d} = 7113$$ 
+		fenditure. Possiamo confrontare questo valore con quello calcolato considerando 300 fenditure per millimetro, valore riportato sul reticolo arrivando così ad avere $7200$ fenditure. Propagando l'errore sulla prima formula (consideriamo come errore su $L \ 1 \ mm$, la sensibilità dello strumento) otteniamo un errore di circa $296$ fenditure da cui troviamo che la nostra misura è pienamente compatibile. \\
+		Il potere risolutivo, calcolato attraverso la formula 
+		$$R = mN$$
+		dove m è l'ordine ed $ N $ il numero di fenditure, vale $7113$. Il potere risolutivo necessario a distinguere il doppietto del sodio vale invece 
+		$$R = \frac{\overline{\lambda}}{\lambda _2 - \lambda _1} = 997.17$$ 
+		da cui deduciamo che il nostro reticolo era pienamente all'altezza delle misure eseguite. Quanto al potere dispersivo abbiamo che al primo ordine in linea teorica esso vale $$D = \frac{m}{d \cos(\theta)}$$ 
+		Se come valore di $\theta$ consideriamo la media tra l'angolo del viola interno e del rosso, angolo cui più o meno si trovano i massimi del primo ordine, troviamo che 
+		$$\Delta \theta = D \cdot \Delta \lambda = 0.065586 \ rad$$
+		dove $\Delta \lambda$ è la differenza di lunghezza d'onda tra rosso e viola interno. Avendo trovato sperimentalmente $\Delta \theta = 0.065711 \ rad$ si ha che i valori sono compatibili.
+		
+		\section{Conclusione}
+		L'esperimento se pensato come validazione del modello teorico del reticolo è complessivamente riuscito. La misura del doppietto del sodio ha dato una misura del passo del reticolo precisissima, compatibile con quella dichiarata. Pur essendo anche le misure dello spettro del mercurio assai accurate, questo è risultato largamente compatibile con quello teorico. L'unico fatto rimasto inspiegato è la presenza di tre lunghezze d'onda con intensità relativa molto bassa.
+		
+\end{document}

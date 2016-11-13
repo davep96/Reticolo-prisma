@@ -1,0 +1,54 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[italian]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{lmodern}
+\usepackage{siunitx}
+\newcommand*\chem[1]{\ensuremath{\mathrm{#1}}}
+
+\newcommand{\virgolette}[1]{``#1''}
+
+\author{Nicolò Cavalleri, Giacomo Lini, Davide Passaro}
+
+\title{Spettrometro a Reticolo}
+
+\begin{document}
+
+\maketitle
+\author
+
+\begin{abstract}
+
+	Di seguito vengono riportate ed esaminate le procedure compiute per la misura di diverse grandezze fisiche caratteristiche di un sistema composto da un reticolo che presenta fenomeni di interferenza e diffrazione. Nello specifico, dato un reticolo, viene determinato il passo, cioè la distanza tra due fenditure, a partire dallo spettro di emissione di una sostanza con lunghezza d'onda nota; vengono determinati anche il potere dispersivo e risolutivo, rispettivamente la distanza angolare tra due righe spettrali a un determinato ordine e un indice della capacità dello strumento di risolvere in maniera precisa delle righe di dispersione. Data inoltre una lampada al mercurio (\chem{Hg}), ne viene determinato lo spettro di emissione, con le lunghezze d'onda caratteristiche. 
+	
+\end{abstract}
+	
+\section{Introduzione} 
+
+	Uno spettrometro a reticolo è un sistema fisico composto da una base fissa su cui sono disposte due strutture rotanti, collegate a un goniometro e dei noni
+	per la misura di angoli. Al centro di questa struttura si trova un sostegno dove viene posto il reticolo, vale a dire una lastra di vetro con delle fenditure molto numerose e sottili. A questa piattaforma sono poi collegati un collimatore, cioè un dispositivo che \virgolette{raddrizza} o \virgolette{collima}, il fascio di luce rendendolo perpendicolare al reticolo, e un cannocchiale che consente di osservare lo spettro di emissione della luce incidente il reticolo. Avvicinando il collimatore ad una
+	lampada è possibile catturare la luce emessa dalla stessa e osservarne lo spettro di emissione. \\
+	
+	Dal punto di vista matematico la relazione fondamentale nell'analisi di uno spettro di emissione di una fonte luminosa è la seguente:
+	\begin{equation} \label{master}
+		d \, \sin \theta  = k \, \lambda
+	\end{equation}
+	dove $d$ rappresenta il passo del reticolo, cioè la distanza tra i punti medi di due fenditure vicine, $\theta$ l'angolo di deflessione del raggio di luce reso monocromatico dal reticolo, $k$ l'ordine dello spettro contenente il raggio considerato e $\lambda$ la lunghezza d'onda della radiazione luminosa emessa. Chiaramente a diverse lunghezze d'onda corrispondono anche diverse intensità di emissione, che sperimentalmente si osservano in maniera intuitiva a partire dalla luminosità delle righe di emissione. La relazione matematica che sta alla base di questo fenomeno è la seguente:
+	\begin{equation} \label{intensity}
+		I(\theta) \propto \dfrac{\sin^2 \, \left(m \, \frac{d}{\lambda} \, \pi \sin{\theta} \right)}{\sin^2 \, \left(\frac{d}{\lambda} \,\pi \sin{\theta}\right)}
+	\end{equation}
+	dove $ I $ rappresenta l'intensità luminosa, $m$ il numero di fessure del reticolo che sono investite dalla luce e le altre costanti sono come per la formula $\left( \ref{master} \right)$. \\
+	
+	L'equazione $\left( \ref{master} \right)$, con gli strumenti a disposizione è caratterizzata dal fatto di avere due incognite, $\lambda$ e $d$. Per questa ragione l'esperimento si è svolto in due fasi: la determinazione del passo ($ d $) a partire da uno spettro noto, e la determinazione dello spettro una volta noto il passo. Nel nostro caso per la determinazione del passo è stata usata una lampada al sodio la cui emissione è caratterizzata da due lunghezze d'onda specifiche:
+	\[ 
+		\lambda_1 = \SI{589.0}{\nano\meter} \quad
+		\lambda_2 = \SI{589.6}{\nano\meter}
+	\]
+	corrispondenti a due righe gialle distinte ma molto vicine nello spettro. Risolvendo $\left( \ref{master} \right)$ rispetto a $d$ è possibile dunque determinare il passo del reticolo, che da incognita diventa un termine noto, con errore associato. A questo punto la stessa relazione garantisce di poter determinare le lunghezze d'onda dello spettro di emissione di un diverso elemento chimico, nel caso in questione il mercurio (\chem{Hg}).
+
+\end{document}
