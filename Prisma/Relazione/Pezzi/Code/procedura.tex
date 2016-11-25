@@ -37,12 +37,36 @@
 \newcommand*\chem[1]{\ensuremath{\mathrm{#1}}}
 
 \begin{document}
+
+\section{Iter sperimentale}
+	È possibile dividere la procedura sperimentale in tre fasi:
+	\begin{itemize}
+		\item Calibrazione e messa a punto dello spettroscopio.
+		\item Misura dell'angolo sotteso da due lati del prisma.
+		\item Ricerca e misura degli angoli di deviazione minima.
+	\end{itemize}
+	Questa esperienza ricalcava quella della misura del passo del reticolo. In particolare la prima fase, quella della calibrazione dello spettroscopio è uguale. Per completezza sarà però riportata una seconda volta la spiegazione.
+	\subsection{Calibrazione dello spettrometro}
+	La calibrazione dello spettrometro era necessaria al fine di rendere più chiaramente visibile lo spettro del mercurio. \\
+	\subsubsection*{Cannocchiale}
+	In primo luogo è stato spostato il fuoco del cannocchiale in modo da poter mettere a fuoco luce proveniente dall'infinito. Per fare ciò è stato puntato il cannocchiale fuori dalla finestra ed è stato messo a fuoco il palazzo di fronte al laboratorio (l'altra ala del Dipartimento di Fisica), posto ad una distanza di circa 50 metri.
+	La calibrazione ottimale del cannocchiale era necessaria per permettere una chiara visione dei raggi di luce paralleli provenienti dal collimatore.\\
+	\subsubsection*{Collimatore}
+	Per la calibrazione del collimatore è stato rimesso a posto il cannocchiale ed è stata accesa la lampada al mercurio. Una volta scaldata attraverso una delle viti del collimatore è stata stretta la fenditura tanto da poter, senza fatica, osservare la luce della lampada attraverso il cannocchiale. Successivamente è stato sistemato il fuoco del collimatore in modo da poter vedere nitidamente la fenditura. Come ultimo passaggio è stata stretta ancora la fenditura fino al punto che il fascio di luce centrale avesse uno spessore di mezzo millimetro circa.
+	\subsection{Misura dell'angolo del prisma}
+	Calibrato il collimatore si è passati alla misura dell'angolo sotteso da due facce del prisma. È necessaria una corretta stima di questa osservabile per poter correttamente valutare gli angoli di deviazione minima. \\
+	Per la misura dell'angolo sotteso si è sfruttato il fenomeno di riflessione parziale. Questo è stato osservato ponendo il prisma sul piatto in modo tale che il raggio di luce proveniente dal collimatore formasse un angolo acuto una faccia del prisma. Ponendo il cannocchiale ad un angolo anch'esso acuto con il collimatore era possibile osservare il raggio riflesso dalla superficie del prisma di vetro e quindi prendere una misura dell'angolo $ \theta_1 $ individuato dal nonio del piatto rotante.\\
+	Si è quindi proceduto fissando il cannocchiale e ruotando il piatto sul quale era posto il prisma in modo tale da ripetere lo stesso procedimento sulla rimanente faccia non trasparente quindi prendere una misura dell'angolo $ \theta_2 $ individuato dal piatto rotante.\\
+	Per una buona stima dell'angolo $ \alpha $  tra le facce del prisma si è quindi considerato il complementare della differenza degli angoli $ \theta_1 $ e $ \theta_2 $. In simboli:
+	\begin{equation}\label{alpha}
+		\alpha = \pi - (\Delta \theta) = \pi - (\theta_2 -\theta_1)= \pi+\theta_1-\theta_2
+	\end{equation}
 	
-	\section{Iter sperimentale}
-	L'iter sperimentale eseguito per la valutazione dell'indice di rifrazione del prisma puÃ² essere suddiviso in tre parti:
-	\begin{enumerate}
-		\item Calibrazione dello spettroscopio.
-		\item Valutazione dell'angolo del prisma.
-		\item Valutazione degli angoli di deviazione minima per ciascuna lunghezza d'onda.
-	\end{enumerate}
+	\subsection{Ricerca degli angoli di deviazione minima}
+	Come per l'esperienza dello spettrometro a reticolo, non si sono misurati direttamente gli angoli ma sono stati misurati come differenze di due angoli. In questo caso, per la determinazione dell'angolo di deviazione minima, è stato innanzitutto misurato l'angolo $ \delta_0 $ individuato dall'immagine diretta della fenditura, col cannocchiale posto parallelamente al collimatore, sul nonio del cannocchiale. \\
+	Quindi per ogni lunghezza d'onda si è andata a cercare l'immagine della fenditura. Le immagini della fenditura causate da raggi di lunghezza d'onda differente erano distinguibili dal colore e, sempre attraverso il colore, riconducibili ai valori verificati nell'esperienza del reticolo. \\
+	Trovata l'immagine, si è potuto constatare che, ruotando il piatto si poteva osservare un "movimento" dell'immagine della fenditura. Se inoltre il piatto era ruotato in una direzione particolare, ossia in senso orario se il cannocchiale era sulla destra del collimatore e viceversa, l'immagine si muoveva inizialmente allontanandosi dal collimatore solo per poi invertire il senso di marcia. \\
+	La condizione di deviazione minima era quindi verificata nel punto nel quale l'immagine invertiva il senso di marcia. È stato quindi misurato l'angolo individuato sul nonio del cannocchiale $ \delta_1 $ ed è stato calcolato l'angolo di deviazione minima attraverso la relazione:
+	\[ \delta(\lambda)=\delta_1-\delta_0 \]
+
 \end{document}
