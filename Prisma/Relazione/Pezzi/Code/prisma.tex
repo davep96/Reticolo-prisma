@@ -125,7 +125,7 @@
 			\end{tabular}%
 			\label{delta}%
 		\end{table}%
-		
+	
 		\subsection{Elaborazione dei dati e presentazione dei risultati - Indici di Rifrazione}
 		
 		I dati riportati nella sezione precedente sono sufficienti per poter ricavare dei valori relativi all'indice di rifrazione $n$ del materiale di cui è composto il prisma come funzione della lunghezza d'onda $\lambda$ della luce incidente. Riportiamo per comodità la formula da cui si ricava il valore di $n_\lambda$ (l'equazione \ref{n} in introduzione):
@@ -166,10 +166,17 @@
 		
 		\subsection{Elaborazione dei dati e presentazione dei risultati - Regressione Lineare}
 		Chiaramente di per sé questi valori sono poco indicativi, nella misura in cui non si hanno termini di confronto con cui testarne la compatibilità. Tuttavia l'equazione \ref{Cauchy} suggerisce che la bontà delle misure effettuate -- a meno di errori sistematici -- possa essere testata proprio trovando la miglior retta passante per i punti del piano $(n_{\lambda}^{2}, \frac{1}{\lambda ^2})$.
+
+		\begin{wrapfigure}{l}{0.5\textwidth}
+			\caption{Grafico della regressione}\label{regr}
+				\centering
+				\includegraphics[width=0.5\textwidth]{Retta}
+		\end{wrapfigure}
+
 		
 		In merito all'utilizzo dell'algoritmo di regressione lineare occorre tuttavia una precisazione. I dati che abbiamo a disposizione sia per quanto riguarda l'asse delle $x$ che quello delle $y$ hanno errore variabile. In una situazione del genere non è teoricamente possibile utilizzare l'algoritmo di regressione nella forma pesata. Quello che si osserva è però che se si calcola il coefficiente angolare della retta trascurando gli errori, e si sommano in quadratura gli errori di ascisse e ordinate, il risultato differisce alla quarta cifra significativa rispetto a $\sigma_{n^2}$. Il contributo dell'errore su $\frac{1}{\lambda ^2}$ è dunque $10^{-4}$ volte significativo rispetto a quello di $n^2$. In considerazione di questo fatto abbiamo adottato l'algoritmo di regressione pesata\footnote{\'E evidente che la procedura adottata non può essere considerata formalmente inattaccabile, in quanto per scegliere quale tipo di algoritmo di regressione lineare abbiamo calcolato uno dei termini incogniti dell'algoritmo di regressione con un metodo meno raffinato. Quello che giustifica la scelta presente è il fatto, osservabile solo a posteriori, che l'errore sulle ordinate ha un contributo nel calcolo dei termini di regressione molto superiore rispetto a quello sulle ascisse.}.
 		
-		In tabella \ref{regressione} vengono riportati i dati tramite i quali è stato effettuato il calcolo di coefficiente angolare e intercetta per la retta.
+		In tabella \ref{regressione} vengono riportati i dati tramite i quali è stato effettuato il calcolo di coefficiente angolare e intercetta per la retta e nella figura \ref{regr} viene riportato il grafico di $ n^2 \text{ e } \lambda^{-2} $ e la relativa retta di regressione.
 			
 		
 		\begin{table}[htbp]

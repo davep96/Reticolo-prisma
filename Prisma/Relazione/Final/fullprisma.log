@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.12)  27 NOV 2016 17:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.12)  27 NOV 2016 17:49
 entering extended mode
-**./prisma.tex
-(prisma.tex
+**./fullprisma.tex
+(fullprisma.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -619,8 +619,13 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \WF@box=\box57
 \WF@everypar=\toks28
 Package: wrapfig 2003/01/31  v 3.6
-) (prisma.aux)
-\openout1 = `prisma.aux'.
+)
+(fullprisma.aux
+
+LaTeX Warning: Label `alpha' multiply defined.
+
+)
+\openout1 = `fullprisma.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
@@ -789,75 +794,80 @@ LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 44.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-
-LaTeX Warning: Reference `Cauchy' on page 1 undefined on input line 48.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 58.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 58.
-
-LaTeX Warning: Reference `n' on page 1 undefined on input line 131.
-
-[1
+) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<Images/Prisma.png, id=11, 641.9985pt x 373.6359pt>
+File: Images/Prisma.png Graphic file (type png)
+ <use Images/Prisma.png>
+Package pdftex.def Info: Images/Prisma.png used on input line 84.
+(pdftex.def)             Requested size: 452.9679pt x 263.62999pt.
 
-LaTeX Warning: Reference `Cauchy' on page 2 undefined on input line 168.
+[1 <./Images/Prisma.png>]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 141.
 
-[2] <Images/Retta.jpg, id=25, 793.46437pt x 508.14844pt>
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 141.
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--151
+
+ []
+
+[3]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 181.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 181.
+ [4] [5] <Images/Retta.jpg, id=43, 793.46437pt x 508.14844pt>
 File: Images/Retta.jpg Graphic file (type jpg)
 
 <use Images/Retta.jpg>
-Package pdftex.def Info: Images/Retta.jpg used on input line 175.
+Package pdftex.def Info: Images/Retta.jpg used on input line 296.
 (pdftex.def)             Requested size: 226.48395pt x 145.04091pt.
+ [6 <./Images/Retta.jpg>] [7] (fullprisma.aux)
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--176
-\T1/lmr/m/n/10.95 an-go-la-re e in-ter-cet-ta per la ret-ta.
- []
-
-
-Underfull \hbox (badness 1708) in paragraph at lines 199--200
-[]\T1/lmr/m/n/10.95 Per que-sto set di da-ti l'al-go-rit-mo di
- []
-
-
-LaTeX Warning: Reference `Cauchy' on page 3 undefined on input line 220.
-
-[3 <./Images/Retta.jpg>] [4] (prisma.aux)
-
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14580 strings out of 493334
- 282288 string characters out of 3136672
- 318308 words of memory out of 3000000
- 17913 multiletter control sequences out of 15000+200000
- 74346 words of font info for 63 fonts, out of 3000000 for 9000
+ 14632 strings out of 493334
+ 283161 string characters out of 3136672
+ 317375 words of memory out of 3000000
+ 17958 multiletter control sequences out of 15000+200000
+ 98991 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,12n,42p,10359b,506s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,12n,42p,10363b,505s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/
-MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files (x86)/MiKTeX 2.9/
-fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips
-/lm/lm-mathit.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx
+iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files (x86)/MiKT
+eX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/font
+s/enc/dvips/lm/lm-mathex.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips
+/lm/lm-mathsy.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx
 10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
-/lmsy8.pfb>
-Output written on prisma.pdf (4 pages, 273530 bytes).
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/lm/lmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmm
+i9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
+/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
+Output written on fullprisma.pdf (8 pages, 673379 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
